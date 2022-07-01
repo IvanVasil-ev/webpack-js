@@ -1,0 +1,11 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo '*️⃣ Build in process...'
+
+yarn build || (
+  echo '❌ Build failed...'
+  false;
+)
+
+echo '✅ Build is done.'
